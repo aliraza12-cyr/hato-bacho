@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+</head>
+<script>
+function Click(){
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let last = document.getElementById("last").value;
+    let number = document.getElementById("number").value;
+
+
+    if(name === "ali" && email === "ali@gmail.com"){
+        window.open("sign.html");
+       
+    }
+    if( last === "raza" && number === "1234567"){
+        window.open("sign.html");
+    }
+    
+
+else{
+        alert("Login Failed");
+    }
+}
+
+function hello(){
+ document.getElementById("hi").innerHTML = "Please enter a stronge password";
+}
+
+</script>
+<style>
+    .main{
+        margin-left: 250px;
+        margin-top: 200px;
+        background-color: whitesmoke;
+        width: 800px;
+        height: 500px;
+        margin-top: 50px;
+        box-shadow: 5px 5px 5px 5px #b8b7b7;
+       
+    }
+
+    .sidee{
+        margin-top: 20px;
+        height: 500px;
+        width: 350px;
+        background-color: orange;
+        margin-left: 450px;
+        border-radius: 70px 0px 0px 70px;
+        animation-name: side;
+        animation-duration: 3s;
+        animation-delay: 0s;
+        animation-iteration-count:1 ;
+    }
+    @keyframes side{
+        0%{
+            width: 350px;
+        }
+       
+        100%{
+            width: 0px;
+        }
+   
+}
+form{
+        padding-top: 40px;
+        padding-left: 80px;
+        margin-top: -500px;
+        animation-name: form;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+
+    }
+    @keyframes form{
+        0%{
+            margin-top: -1000px;
+        }
+        100%{
+            margin-top: -500px;
+        }
+    }
+    form label{
+        color: gray;
+    }
+    input{
+        width: 250px;
+        border: 1px solid gray;
+        border-radius: 20px;
+        padding-left: 10px;
+        height: 20px;
+    }
+    button{
+        width: 100px;
+        height: 30px;
+        margin-top: 20px;
+        background-color: hsl(200, 100%, 50%);
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+        margin-left: 100px;
+        color: white;
+
+    }
+    
+    button:hover{
+        background-color: hwb(216 0% 0%);
+    }
+  
+</style>
+<body>
+    <div class="main">
+
+        <div class="sidee"></div>
+
+    <form action="">
+   <label for="">First Name:</label>
+   <br>
+ 
+   <input id="name" type="text" placeholder="Enter Your First Name" required>
+   <br>
+   <br>
+   <label id="last" for="">Last Name:</label>
+   <br>
+   <input type="text" placeholder="Enter Your last Name" required>
+   <br>
+   <br>
+   <label for="">Number:</label>
+   <br>
+  
+   <input id="number" type="tel" placeholder="Enter Your Number" required>
+   <br>
+   <br>
+   <label for="">E-mail address:</label>
+   <br>
+   <input id="email" type="email" placeholder="Enter Your Email " required>
+   <br>
+   <br>
+   <label for="">Password:</label>
+   <br>
+   <input  type="password" placeholder="Enter Your Password" required onkeydown="hello()"> 
+
+   <p id="hi"></p>
+   
+
+
+   
+<br>
+<br>
+    <label for="">Select Your City:</label>
+    <select name="" id="" required>
+        <option value="">select</option>
+        <option value="">Karachi</option>
+        <option value="">Lahore</option>
+        <option value="">Quetta</option>
+        <option value="">Faislabad</option>
+        <option value="">Sukker</option>
+        <option value="">Multan</option>
+    </select>
+<br>
+<br>
+
+<button onclick="Click()">Sign up</button>
+
+
+
+
+
+</form>
+</div>
+</body>
+</html>
